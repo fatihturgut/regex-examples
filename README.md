@@ -285,7 +285,7 @@ console.log(result); // ["Y", "o", "u", "r", " ", "b", "u", "r", "g", "e", "r",
 ```
 
 ### 23. Restrict Possible Usernames
-#### requirements
+> ##### requirements
 > 1. If there are numbers, they must be at the end.
 > 2. Letters can be lowercase and uppercase
 > 3. At least two letters long.
@@ -318,12 +318,41 @@ var result = regex.test(string);
 console.log(result); // false
 ```
 
+```javascript
+var string = "ja23ck1";
+var regex = /^[A-Za-z]{2,}\d*$/;
+var result = regex.test(string);
+console.log(result); // false
+```
+
 ### 24. Match Whitespace
 ```javascript
+var string = "Whitespace is important.";
+var regex = / /g;
+var result = string.match(regex);
+console.log(result); // [" ", " "]
+```
+
+```javascript
+var string = "Whitespace is important.";
+var regex = /\s/g;
+var result = string.match(regex);
+console.log(result); // [" ", " "]
 ```
 
 ### 25. Match Non-Whitespace Characters
 ```javascript
+var string = "s p a c e";
+var regex = /[^ ]/g;
+var result = string.match(regex);
+console.log(result); // ["s", "p", "a", "c", "e"]
+```
+
+```javascript
+var string = "s p a c e";
+var regex = /\S/g;
+var result = string.match(regex);
+console.log(result); // ["s", "p", "a", "c", "e"]
 ```
 
 ### 26. Specify Upper and Lower Number of Matches
