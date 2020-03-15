@@ -1,5 +1,5 @@
 # Regex Examples
-Learn regex by inspecting the regex examples.
+Learn **Regular Expressions**, aka **regex**, by inspecting the various examples.
 
 ![Regex](https://github.com/fatihturgut/regex-examples/blob/master/regex.png)
 
