@@ -1,4 +1,7 @@
-* Using the Test Method
+# Regex Examples
+Learn regex by inspecting the regex examples.
+
+### 1. Using the Regex Test Method
 ```javascript
 var string = "The dog chased the cat";
 var regex = /the/
@@ -6,7 +9,7 @@ var result = regex.test(string);
 console.log(result); // true
 ```
 
-* Match Literal Strings
+### 2. Match Literal Strings
 ```javascript
 var string = "Hello World";
 var regex = /Hello/
@@ -21,7 +24,7 @@ var result = regex.test(string);
 console.log(result); // false
 ```
 
-* Match a Literal String with Different Possibilities (or operator)
+### 3. Match a Literal String with Different Possibilities (or operator)
 ```javascript
 var string = "Jhonny has cat and dog.";
 var regex = /cat|dog|bird/
@@ -29,7 +32,7 @@ var result = regex.test(string);
 console.log(result); // true
 ```
 
-* Ignore Case While Matching
+### 4. Ignore Case While Matching
 ```javascript
 var string = "davidBeckham";
 var regex = /davidbeckham/i;
@@ -37,7 +40,7 @@ var result = regex.test(string);
 console.log(result); // true
 ```
 
-* Extract Matches
+### 5. Extract Matches
 ```javascript
 var string = "Extract the word 'coding' form this string";
 var regex = /coding/;
@@ -45,8 +48,7 @@ var result = string.match(regex);
 console.log(result); // ["coding", index: 18, input: "Extract the word 'coding' form this string 'coding'", groups: undefined]
 ```
 
-
-* Find More Than the First Match, Multiple Match (g flag)
+### 6. Find More Than the First Match, Multiple Match (g flag)
 ```javascript
 var string = "Repeat, Repeat, Repeat";
 var regex = /Repeat/g;
@@ -54,7 +56,7 @@ var result = string.match(regex);
 console.log(result); // ["Repeat", "Repeat", "Repeat"]
 ```
 
-* Find More Than the First Match, Multiple Match (i g flags)
+### 7. Find More Than the First Match, Multiple Match (i g flags)
 ```javascript
 var string = "Repeat, repeat, repeat";
 var regex = /repeat/ig;
@@ -62,7 +64,7 @@ var result = string.match(regex);
 console.log(result); // ["Repeat", "repeat", "repeat"]
 ```
 
-* Match Anything with Wildcard Period
+### 8. Match Anything with Wildcard Period
 ```javascript
 var string = "release, repeat, revert";
 var regex = /re./g;
@@ -77,7 +79,7 @@ var result = string.match(regex);
 console.log(result); // ["fun", "sun", "run"]
 ```
 
-* Match Single Character with Multiple Possibilities
+### 9. Match Single Character with Multiple Possibilities
 ```javascript
 var string = "bag, big, bug";
 var regex = /b[aiu]g/g;
@@ -99,7 +101,7 @@ var result = string.match(regex);
 console.log(result); // ["e", "a", "e", "o", "U", "i", "e", "a", "O", "e", "o", "e"]
 ```
 
-* Match Letters of the Alphabet
+### 10. Match Letters of the Alphabet
 ```javascript
 var string = "The quick brown fox jumps over the lazy dog.";
 var regex = /[a-z]/ig;
@@ -107,7 +109,7 @@ var result = string.match(regex);
 console.log(result); // ["T", "h", "e", "q", "u", "i", "c", "k", "b", "r", "o", "w", "n", "f", "o", "x", "j", "u", "m", "p", "s", "o", "v", "e", "r", "t", "h", "e", "l", "a", "z", "y", "d", "o", "g"]
 ```
 
-* Match Numbers and Letters of the Alphabet
+### 11. Match Numbers and Letters of the Alphabet
 ```javascript
 var string = "Number pi is 3.14159265359.";
 var regex = /[2-6h-s]/ig;
@@ -115,14 +117,14 @@ var result = string.match(regex);
 console.log(result); // ["N", "m", "r", "p", "i", "i", "s", "3", "4", "5", "2", "6", "5", "3", "5"]
 ```
 
-* Match Single Characters Not Specified
+### 12. Match Single Characters Not Specified
 ```javascript
 var string = "3 blind mice.";
 var regex = /[^0-9aeiou]/ig;
 var result = string.match(regex);
 console.log(result); // [" ", "b", "l", "n", "d", " ", "m", "c", "."]
 ```
-* Match Characters that Occur One or More Times
+### 13. Match Characters that Occur One or More Times
 ```javascript
 var string = "Mississippi";
 var regex = /s+/g;
@@ -136,7 +138,8 @@ var regex = /s+/g;
 var result = string.match(regex);
 console.log(result); // ["ss", "ss", "s", "s", "s"]
 ```
-* Match Characters that Occur Zero or More Times
+
+### 14. Match Characters that Occur Zero or More Times
 ```javascript
 var string1 = "gooooooooal!";
 var string2 = "feels good";
@@ -158,79 +161,79 @@ console.log(result); // ["Aaaaa", index: 0, input: "Aaaaarrghhh!", groups: undef
 ```
 
 // 
-* Find Characters with Lazy Matching
+### 15. Find Characters with Lazy Matching
 ```
 ```
 // 
-* Find One or More Criminals in a Hunt
+### 16. Find One or More Criminals in a Hunt
 ```
 ```
 // 
-* Match Beginning String Patterns
+### 17. Match Beginning String Patterns
 ```
 ```
 // 
-* Match Ending String Patterns
+### 18. Match Ending String Patterns
 ```
 ```
 // 
-* Match All Letters and Numbers
+### 19. Match All Letters and Numbers
 ```
 ```
 // 
-* Match Everything But Letters and Numbers
+### 20. Match Everything But Letters and Numbers
 ```
 ```
 // 
-* Match All Numbers
+### 21. Match All Numbers
 ```
 ```
 // 
-* Match All Non-Numbers
+### 22. Match All Non-Numbers
 ```
 ```
 // 
-* Restrict Possible Usernames
+### 23. Restrict Possible Usernames
 ```
 ```
 // 
-* Match Whitespace
+### 24. Match Whitespace
 ```
 ```
 // 
-* Match Non-Whitespace Characters
+### 25. Match Non-Whitespace Characters
 ```
 ```
 // 
-* Specify Upper and Lower Number of Matches
+### 26. Specify Upper and Lower Number of Matches
 ```
 ```
 // 
-* Specify Only the Lower Number of Matches
+### 27. Specify Only the Lower Number of Matches
 ```
 ```
 // 
-* Specify Exact Number of Matches
+### 28. Specify Exact Number of Matches
 ```
 ```
 // 
-* Check for All or None
+### 29. Check for All or None
 ```
 ```
 // 
-* Positive and Negative Lookahead
+### 30. Positive and Negative Lookahead
 ```
 ```
 // 
-* Reuse Patterns Using Capture Groups
+### 31. Reuse Patterns Using Capture Groups
 ```
 ```
 // 
-* Use Capture Groups to Search and Replace
+### 32. Use Capture Groups to Search and Replace
 ```
 ```
 // 
-* Remove Whitespace from Start and End
+### 33. Remove Whitespace from Start and End
 ```
 ```
 // 
