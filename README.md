@@ -141,16 +141,24 @@ console.log(result); // ["ss", "ss", "s", "s", "s"]
 
 ### 14. Match Characters that Occur Zero or More Times
 ```javascript
-var string1 = "gooooooooal!";
-var string2 = "feels good";
-var string3 = "over the moont";
+var string = "gooooooooal!";
 var regex = /go*/;
-var result1 = string1.match(regex);
-var result2 = string2.match(regex);
-var result3 = string3.match(regex);
+var result = string.match(regex);
 console.log(result1); // ["goooooooo", index: 0, input: "gooooooooal!", groups: undefined]
-console.log(result2); // ["goo", index: 6, input: "feels good", groups: undefined]
-console.log(result3); // null
+```
+
+```javascript
+var string = "feels good";
+var regex = /go*/;
+var result = string.match(regex);
+console.log(result); // ["goo", index: 6, input: "feels good", groups: undefined]
+```
+
+```javascript
+var string = "over the moon";
+var regex = /go*/;
+var result = string.match(regex);
+console.log(result); // null
 ```
 
 ```javascript
@@ -163,6 +171,31 @@ console.log(result); // ["Aaaaa", index: 0, input: "Aaaaarrghhh!", groups: undef
 
 ### 15. Find Characters with Lazy Matching
 ```javascript
+var string = "titanic";
+var regex = /t[a-z]*i/;
+var result = string.match(regex);
+console.log(result); // ["titani", index: 0, input: "titanic", groups: undefined]
+```
+
+```javascript
+var string = "titanic";
+var regex = /t[a-z]*?i/;
+var result = string.match(regex);
+console.log(result); // ["ti", index: 0, input: "titanic", groups: undefined]
+```
+
+```javascript
+var string = "<h1>Winter is comming</h1>";
+var regex = /<.*>/;
+var result = string.match(regex);
+console.log(result); // ["<h1>Winter is comming</h1>", index: 0, input: "<h1>Winter is comming</h1>", groups: undefined]
+```
+
+```javascript
+var string = "<h1>Winter is comming</h1>";
+var regex = /<.*?>/;
+var result = string.match(regex);
+console.log(result); // ["<h1>", index: 0, input: "<h1>Winter is comming</h1>", groups: undefined]
 ```
 
 ### 16. Find One or More Criminals in a Hunt
