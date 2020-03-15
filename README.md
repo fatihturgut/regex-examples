@@ -357,33 +357,113 @@ console.log(result); // ["s", "p", "a", "c", "e"]
 
 ### 26. Specify Upper and Lower Number of Matches
 ```javascript
+var string = "Ohhh no";
+var regex = /Oh{3,6} no/;
+var result = regex.test(string);
+console.log(result); // true
+```
+
+```javascript
+var string = "Ohhh no";
+var regex = /Oh{3,} no/;
+var result = regex.test(string);
+console.log(result); // true
+```
+
+```javascript
+var string = "Ohhh no";
+var regex = /Oh{4,6} no/;
+var result = regex.test(string);
+console.log(result); // false
 ```
 
 ### 27. Specify Only the Lower Number of Matches
 ```javascript
+var string = "Hazzzzah";
+var regex = /z{4,}/;
+var result = regex.test(string);
+console.log(result); // true
 ```
 
 ### 28. Specify Exact Number of Matches
 ```javascript
+var string = "Timmmmber";
+var regex = /Tim{4}ber/;
+var result = regex.test(string);
+console.log(result); // true
 ```
 
 ### 29. Check for All or None
 ```javascript
+var string = "favorite";
+var regex = /favou?rite/;
+var result = regex.test(string);
+console.log(result); // true
 ```
 
-### 30. Positive and Negative Lookahead
 ```javascript
+var string = "favourite";
+var regex = /favou?rite/;
+var result = regex.test(string);
+console.log(result); // true
 ```
 
-### 31. Reuse Patterns Using Capture Groups
+### 30. Positive Lookahead
 ```javascript
+var string = "fatihturgut1";
+var regex = /fatihturgut(?=1)/;
+var result = string.match(regex);
+console.log(result); // ["fatihturgut", index: 0, input: "fatihturgut1", groups: undefined]
+```
+
+```javascript
+var string = "fatihturgut2";
+var regex = /fatihturgut(?=1)/;
+var result = string.match(regex);
+console.log(result); // null
+```
+
+### 31. Negative Lookahead
+```javascript
+var string = "fatihturgut1";
+var regex = /fatihturgut(?!2)/;
+var result = string.match(regex);
+console.log(result); // ["fatihturgut", index: 0, input: "fatihturgut1", groups: undefined]
+```
+
+```javascript
+var string = "fatihturgut1";
+var regex = /fatihturgut(?!1)/;
+var result = string.match(regex);
+console.log(result); // null
 ```
 
 ### 32. Use Capture Groups to Search and Replace
 ```javascript
+var string = "The sky is silver.";
+var regex = /silver/;
+var result = string.replace(regex, "blue");
+console.log(result); // The sky is blue.
+```
+
+```javascript
+var string = "Code Camp";
+var regex = /(\w+)\s(w+)/;
+var result = string.replace(regex, "$1 $2");
+console.log(result); // Code Camp.
+```
+
+```javascript
+var string = "This sandwich is good.";
+var regex = /good/;
+var result = string.replace(regex, "okey-dokey");
+console.log(result);
 ```
 
 ### 33. Remove Whitespace from Start and End
 ```javascript
+var string = "    Hello World!    ";
+var regex = /^\s+|\s+$/g;
+var result = string.replace(regex, "");
+console.log(result); // Hello World!
 ```
-
