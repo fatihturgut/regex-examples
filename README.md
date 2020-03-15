@@ -160,80 +160,80 @@ var result = string.match(regex);
 console.log(result); // ["Aaaaa", index: 0, input: "Aaaaarrghhh!", groups: undefined]
 ```
 
-// 
+
 ### 15. Find Characters with Lazy Matching
+```javascript
 ```
-```
-// 
+
 ### 16. Find One or More Criminals in a Hunt
+```javascript
 ```
-```
-// 
+
 ### 17. Match Beginning String Patterns
+```javascript
 ```
-```
-// 
+
 ### 18. Match Ending String Patterns
+```javascript
 ```
-```
-// 
+
 ### 19. Match All Letters and Numbers
+```javascript
 ```
-```
-// 
+
 ### 20. Match Everything But Letters and Numbers
+```javascript
 ```
-```
-// 
+
 ### 21. Match All Numbers
+```javascript
 ```
-```
-// 
+
 ### 22. Match All Non-Numbers
+```javascript
 ```
-```
-// 
+
 ### 23. Restrict Possible Usernames
+```javascript
 ```
-```
-// 
+
 ### 24. Match Whitespace
+```javascript
 ```
-```
-// 
+
 ### 25. Match Non-Whitespace Characters
+```javascript
 ```
-```
-// 
+
 ### 26. Specify Upper and Lower Number of Matches
+```javascript
 ```
-```
-// 
+
 ### 27. Specify Only the Lower Number of Matches
+```javascript
 ```
-```
-// 
+
 ### 28. Specify Exact Number of Matches
+```javascript
 ```
-```
-// 
+
 ### 29. Check for All or None
+```javascript
 ```
-```
-// 
+
 ### 30. Positive and Negative Lookahead
+```javascript
 ```
-```
-// 
+
 ### 31. Reuse Patterns Using Capture Groups
+```javascript
 ```
-```
-// 
+
 ### 32. Use Capture Groups to Search and Replace
+```javascript
 ```
-```
-// 
+
 ### 33. Remove Whitespace from Start and End
+```javascript
 ```
-```
-// 
+
