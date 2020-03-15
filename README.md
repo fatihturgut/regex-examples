@@ -202,34 +202,120 @@ console.log(result); // ["<h1>", index: 0, input: "<h1>Winter is comming</h1>", 
 
 ### 16. Find One or More Criminals in a Hunt
 ```javascript
+var string = "P1P2P3P4P4P5CCCP7P8P9";
+var regex = /C+/;
+var result = string.match(regex);
+console.log(result); // ["CCC", index: 12, input: "P1P2P3P4P4P5CCCP7P8P9", groups: undefined]
 ```
 
 ### 17. Match Beginning String Patterns
 ```javascript
+var string = "John and Ricky Both like racing";
+var regex = /^John/;
+var result = regex.test(string);
+console.log(result); // true
+```
+
+```javascript
+var string = "Ricky and John Both like racing";
+var regex = /^John/;
+var result = regex.test(string);
+console.log(result); // false
 ```
 
 ### 18. Match Ending String Patterns
 ```javascript
+var string = "John loves Emma";
+var regex = /Emma$/;
+var result = regex.test(string);
+console.log(result); // true
+```
+
+```javascript
+var string = "Emma loves John";
+var regex = /Emma$/;
+var result = regex.test(string);
+console.log(result); // false
 ```
 
 ### 19. Match All Letters and Numbers
 ```javascript
+var string = "There are 5 crates.";
+var regex = /\w/g;
+var result = string.match(regex).length;
+console.log(result); // 15
+```
+
+```javascript
+var string = "Thereare5crates";
+var regex = /\w/g;
+var result = string.match(regex).length;
+console.log(result); // 15
 ```
 
 ### 20. Match Everything But Letters and Numbers
 ```javascript
+var string = "There are 5 crates.";
+var regex = /\W/g;
+var result = string.match(regex);
+console.log(result); // [" ", " ", " ", "."]
+```
+
+```javascript
+var string = "Thereare5crates";
+var regex = /\W/g;
+var result = string.match(regex);
+console.log(result); // null
 ```
 
 ### 21. Match All Numbers
 ```javascript
+var string = "Your burger will be $5.00";
+var regex = /\d/g;
+var result = string.match(regex);
+console.log(result); // ["5", "0", "0"]
 ```
 
 ### 22. Match All Non-Numbers
 ```javascript
+var string = "Your burger will be $5.00";
+var regex = /\D/g;
+var result = string.match(regex);
+console.log(result); // ["Y", "o", "u", "r", " ", "b", "u", "r", "g", "e", "r", " ", "w", "i", "l", "l", " ", "b", "e", " ", "$", "."]
 ```
 
 ### 23. Restrict Possible Usernames
+#### requirements
+> 1. If there are numbers, they must be at the end.
+> 2. Letters can be lowercase and uppercase
+> 3. At least two letters long.
+
 ```javascript
+var string = "Jack1";
+var regex = /^[A-Za-z]{2,}\d*$/;
+var result = regex.test(string);
+console.log(result); // true
+```
+
+```javascript
+var string = "Jack";
+var regex = /^[A-Za-z]{2,}\d*$/;
+var result = regex.test(string);
+console.log(result); // true
+```
+
+```javascript
+var string = "jo1";
+var regex = /^[A-Za-z]{2,}\d*$/;
+var result = regex.test(string);
+console.log(result); // true
+```
+
+```javascript
+var string = "j2123";
+var regex = /^[A-Za-z]{2,}\d*$/;
+var result = regex.test(string);
+console.log(result); // false
 ```
 
 ### 24. Match Whitespace
