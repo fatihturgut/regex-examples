@@ -1,6 +1,8 @@
 # Regex Examples
 Learn regex by inspecting the regex examples.
 
+![Regex](https://github.com/fatihturgut/regex-examples/blob/master/regex.png)
+
 ### 1. Using the Regex Test Method
 ```javascript
 var string = "The dog chased the cat";
