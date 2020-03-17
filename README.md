@@ -6,7 +6,7 @@ Learn **Regular Expressions**, aka **regex**, by inspecting the various examples
 ### 1. Using the Regex Test Method
 ```javascript
 var string = "The dog chased the cat";
-var regex = /the/
+var regex = /the/;
 var result = regex.test(string);
 console.log(result); // true
 ```
@@ -14,14 +14,14 @@ console.log(result); // true
 ### 2. Match Literal Strings
 ```javascript
 var string = "Hello World";
-var regex = /Hello/
+var regex = /Hello/;
 var result = regex.test(string);
 console.log(result); // true
 ```
 
 ```javascript
 var string = "hello World";
-var regex = /Hello/
+var regex = /Hello/;
 var result = regex.test(string);
 console.log(result); // false
 ```
@@ -29,7 +29,7 @@ console.log(result); // false
 ### 3. Match a Literal String with Different Possibilities (or operator)
 ```javascript
 var string = "Jhonny has cat and dog.";
-var regex = /cat|dog|bird/
+var regex = /cat|dog|bird/;
 var result = regex.test(string);
 console.log(result); // true
 ```
