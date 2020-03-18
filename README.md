@@ -1,17 +1,17 @@
 # Regex in Javascript
-Learn **Regular Expressions**, aka **regex**, by inspecting the various examples.
+Learn **Regular Expressions**, aka **regex**, **regexp**, by inspecting the various examples.
 
 ![Regex](https://github.com/fatihturgut/regex-examples/blob/master/regex.png)
 
 ## Getting Started
 ### Creating a Regex in JavaScript
 * Regular Expressions are Objects.
-* There are two ways to create RegEx Objects
+* There are two ways to create regex Objects
 ```javascript
 const regex1 = new RegExp(“hello”);
 const regex2 = /hello/;
 ```
-* Once you have a regex object, you can use the one one of the methods on regexp constructor like test(), exec(), etc.
+* Once you have a regex object, you can use the one one of the methods on regex constructor like test(), exec(), etc.
 
 ### Regex Methods
 * `test()` returs true if pattern is found in the passed string; false if not.
@@ -19,7 +19,7 @@ const regex2 = /hello/;
 * `toString()` returns a string of the regular expression syntax.
 
 ### String Methods
-* `match()` returns an array of matches just like exec onRegExp.
+* `match()` returns an array of matches just like exec on regex.
 * `search()` returns an index of the matched string.
 * `replace()` replaces matches with a string.
 * `split()` splits a string into an array. The division is based on the regular expression pattern.
