@@ -1,7 +1,36 @@
-# Regex Examples
+# Regex in Javascript
 Learn **Regular Expressions**, aka **regex**, by inspecting the various examples.
 
 ![Regex](https://github.com/fatihturgut/regex-examples/blob/master/regex.png)
+
+## Getting Started
+### Creating a Regex in JavaScript
+* Regular Expressions are Objects.
+* There are two ways to create RegEx Objects
+```javascript
+const regex1 = new RegExp(“hello”);
+const regex2 = /hello/;
+```
+* Once you have a regex object, you can use the one one of the methods on regexp constructor like test(), exec(), etc.
+
+### Regex Methods
+* `test()` returs true if pattern is found in the passed string; false if not.
+* `exec()` returns an array of matches.
+* `toString()` returns a string of the regular expression syntax.
+
+### String Methods
+* `match()` returns an array of matches just like exec onRegExp.
+* `search()` returns an index of the matched string.
+* `replace()` replaces matches with a string.
+* `split()` splits a string into an array. The division is based on the regular expression pattern.
+
+### Regex Flags
+* It can be used as `/pattern/flags;` or `new RegExp("pattern”, "flags");`
+* `g` - global, match more than one occurance.
+* `i` - case insensitive match, upper or lower case doesn’t matter.
+* `m` - multi-line match.
+
+## Examples
 
 ### 1. Using the Regex Test Method
 ```javascript
