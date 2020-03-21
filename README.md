@@ -110,6 +110,13 @@ var result = string.match(regex);
 console.log(result); // ["fun", "sun", "run"]
 ```
 
+```javascript
+var string = "how is that so hot?";
+var regex = /h.t/g;
+var result = string.match(regex);
+console.log(result); // ["hat", "hot"]
+```
+
 #### 9. Match Single Character with Multiple Possibilities
 ```javascript
 var string = "bag, big, bug";
