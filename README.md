@@ -396,7 +396,7 @@ console.log(result); // ["s", "p", "a", "c", "e"]
 var string = "Ohhh no";
 var regex = /Oh{3,6} no/;
 var result = regex.test(string);
-console.log(result); // true
+console.log(result); //true
 ```
 
 ```javascript
